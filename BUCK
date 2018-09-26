@@ -2,9 +2,10 @@ cxx_binary(
   name = 'foo', 
   header_namespace = '', 
   headers = subdir_glob([
-    ('', '**/*.hpp'), 
+    ('include', '**/*.hpp'), 
   ]), 
-  srcs = glob([
-    '**/*.cpp', 
-  ]), 
+  srcs = [
+    'main.cpp', 
+    'foo.cpp', 
+  ], 
 )
